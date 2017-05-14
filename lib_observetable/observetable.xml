@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade" version="3.0">
+	<name>Table Observer</name>
+	<libraryname>observetable</libraryname>
+	<author>Agerix</author>
+	<creationDate>May 2017</creationDate>
+	<copyright>Copyright (C) 2017 - Agerix</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>mail</authorEmail>
+	<authorUrl>www.agerix.fr</authorUrl>
+	<version>0.1.0</version>
+	<description> 
+		Library to add new Observer
+	</description>
+	<files>
+		<folder>table</folder>
+	</files>
+</extension>
