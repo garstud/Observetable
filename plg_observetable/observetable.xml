@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="system" method="upgrade">
+	<name>PLG_OBSERVETABLE</name>
+	<author>Agerix</author>
+	<creationDate>May 2017</creationDate>
+	<copyright>Copyright (C) 2017 Agerix</copyright>
+	<license>GNU/GPL v2</license>
+	<authorEmail>marc.studer@agerix.fr</authorEmail>
+	<authorUrl>www.agerix.fr</authorUrl>
+	<version>0.1.0</version>
+	<description>PLG_OBSERVETABLE_DESC</description>
+	<files>
+		<filename plugin="observetable">observetable.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="pobservable" type="text" label="Observable class name"
+					description=""
+					class="input-medium" default="JTable" />
+				<field
+					name="pobserver" type="text" label="Observer class name"
+					description=""
+					class="input-medium" default="JTableObserverContent" />
+				<field
+					name="pobserver_path" type="text" label="Observer root path"
+					description="Path from the website root. Used to register the Observer class in the JLoader autoloader process."
+					class="input-xlarge" default="/libraries/observetable" />
+				<field
+					name="pobserver_prefix" type="text" label="Observer class prefix"
+					description="Set the first letter of the Observer class name to autoload from the root path"
+					class="input-mini" default="J" />
+				<field
+					name="perror_disp" type="radio" label="Show errors"
+					description="Show error on screen when can't find one of the classes ?"
+					class="btn-group btn-group-yesno"
+					default="1"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field
+					name="perror_priorities" type="list" label="Error level"
+					description="" default="error"
+					>
+					<option value="error">Error level (red)</option>
+					<option value="warning">Warning level (yellow)</option>
+					<option value="message">Message level (green)</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
