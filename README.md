@@ -35,4 +35,5 @@ The use of Observer Design Pattern in Joomla to monitor an observable class like
 * Set the feature flag from the articles list in Backend
 * Reorder by drag'n drop articles from the articles list in Backend
 * Using the batch/copy process
+
 In fact, JTable is only used when making modifications in the edit view !
