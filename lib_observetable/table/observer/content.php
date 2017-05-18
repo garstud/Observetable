@@ -36,18 +36,46 @@ class JTableObserverContent extends JTableObserver
 	}
 
 	/**
-   * Pre-processor for $table->load($keys, $reset)
+	 * Pre-processor for $table->load($keys, $reset)
+	 *
+	 * @param   mixed    $keys   An optional primary key value to load the row by, or an array of fields to match.  If not
+	 *                           set the instance property value is used.
+	 * @param   boolean  $reset  True to reset the default values before loading the new row.
+	 *
+	 * @return  void
+	 *
+	 * @since   3.1.2
 	 */
 	public function onBeforeLoad($keys, $reset )
 	{
 		self::$app->enqueueMessage("Library JTableObserverContent onBeforeLoad keys=".serialize($keys), 'message');
 	}
 	
+	/**
+	 * Post-processor for $table->load($keys, $reset)
+	 *
+	 * @param   boolean  &$result  The result of the load
+	 * @param   array    $row      The loaded (and already binded to $this->table) row of the database table
+	 *
+	 * @return  void
+	 *
+	 * @since   3.1.2
+	 */
 	public function onAfterLoad(&$result, $row)
 	{
 		self::$app->enqueueMessage("Library JTableObserverContent onAfterLoad row=".serialize($row), 'message');
 	}
 	
+	/**
+	 * Pre-processor for $table->store($updateNulls)
+	 *
+	 * @param   boolean  $updateNulls  The result of the load
+	 * @param   string   $tableKey     The key of the table
+	 *
+	 * @return  void
+	 *
+	 * @since   3.1.2
+	 */
 	public function onBeforeStore($updateNulls, $tableKey)
 	{
 		//...
@@ -55,9 +83,12 @@ class JTableObserverContent extends JTableObserver
 	
 	/**
 	 * Post-processor for $table->store($updateNulls)
-	 * @param   boolean  &$result  The result of the load
+	 *
+	 * @param   boolean  &$result  The result of the store
+	 *
 	 * @return  void
-	 * @since   3.2
+	 *
+	 * @since   3.1.2
 	 */
 	public function onAfterStore(&$result)
 	{
@@ -66,17 +97,28 @@ class JTableObserverContent extends JTableObserver
 
 	/**
 	 * Pre-processor for $table->delete($pk)
+	 *
 	 * @param   mixed  $pk  An optional primary key value to delete.  If not set the instance property value is used.
+	 *
 	 * @return  void
 	 *
-	 * @since   3.2
+	 * @since   3.1.2
 	 * @throws  UnexpectedValueException
 	 */
 	public function onBeforeDelete($pk)
 	{
     //...
 	}
-	
+
+	/**
+	 * Post-processor for $table->delete($pk)
+	 *
+	 * @param   mixed  $pk  The deleted primary key value.
+	 *
+	 * @return  void
+	 *
+	 * @since   3.1.2
+	 */	
 	public function onAfterDelete($pk)
 	{
     //...
