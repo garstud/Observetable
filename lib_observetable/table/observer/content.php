@@ -78,7 +78,7 @@ class JTableObserverContent extends JTableObserver
 	 */
 	public function onBeforeStore($updateNulls, $tableKey)
 	{
-		//...
+		self::$app->enqueueMessage("Library JTableObserverContent onBeforeStore tableKey=".$tableKey, 'message');
 	}
 	
 	/**
@@ -107,7 +107,7 @@ class JTableObserverContent extends JTableObserver
 	 */
 	public function onBeforeDelete($pk)
 	{
-    //...
+ 		self::$app->enqueueMessage("Library JTableObserverContent onBeforeDelete pk=".$pk, 'message');
 	}
 
 	/**
@@ -121,6 +121,6 @@ class JTableObserverContent extends JTableObserver
 	 */	
 	public function onAfterDelete($pk)
 	{
-    //...
+   		self::$app->enqueueMessage("Library JTableObserverContent onAfterDelete pk=".$pk, 'message');
 	}	
 }
