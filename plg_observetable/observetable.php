@@ -1,9 +1,9 @@
 <?php
 /**
  * @version 0.1
- * @package Agerix
+ * @package Observetable
  * @subpackage Tools
- * @copyright (C) 2017 Agerix - www.agerix.fr
+ * @copyright (C) 2017 Garstud - www.garstud.com
  * @license GNU/GPL v2
  */
 
