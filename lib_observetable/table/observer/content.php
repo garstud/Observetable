@@ -1,9 +1,9 @@
 <?php
 /**
  * @package     Observetable
- * @subpackage  Table
+ * @subpackage  ObsEveryWhere
  *
- * @copyright   Copyright (C) 2017 - Agerix
+ * @copyright   Copyright (C) 2017 - Garstud - www.garstud.com
  * @license     GNU General Public License version 2 or later; see LICENSE
  */
 
