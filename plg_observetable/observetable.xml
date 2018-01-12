@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" version="3.0" group="system" method="upgrade">
 	<name>PLG_OBSERVETABLE</name>
-	<author>Agerix</author>
+	<author>Garstud</author>
 	<creationDate>May 2017</creationDate>
-	<copyright>Copyright (C) 2017 Agerix</copyright>
+	<copyright>Copyright (C) 2017 Garstud</copyright>
 	<license>GNU/GPL v2</license>
-	<authorEmail>marc.studer@agerix.fr</authorEmail>
-	<authorUrl>www.agerix.fr</authorUrl>
+	<authorEmail>dev@garstud.com</authorEmail>
+	<authorUrl>www.garstud.com</authorUrl>
 	<version>0.1.0</version>
 	<description>PLG_OBSERVETABLE_DESC</description>
 	<files>
